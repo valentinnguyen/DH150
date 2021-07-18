@@ -1,0 +1,117 @@
+<html>
+<head>
+<style>
+
+#searchBox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+#logo {
+  font-size: calc(10vw + 1em);
+  color: #f88379;
+  user-select: none;
+}
+
+#searchInput {
+  font-size: calc(0.5vw + 1em);
+  color: black;
+  width: 100%;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  padding-left: 1em;
+  padding-right:2.5em;
+  border-radius: 1.25em;
+  border: 1px solid hsla(220, 20%, 70%, 0.9);
+}
+
+#searchInput:hover {
+  filter: drop-shadow(1px 1px 2px hsla(220, 20%, 70%, 0.9));
+  cursor: pointer;
+}
+
+#searchInput:focus {
+  border: 2px solid hsla(320, 50%, 50%, 0.9);
+  outline: 2px solid hsla(320, 50%, 50%, 0.9);
+}
+
+#searchButton {
+  font-size: calc(0.5vw + 1em);
+  color: white;
+  padding: 0.5em 1em;
+  border-radius: 2em;
+  margin: 0.5em;
+  background-color: #f88379;
+  border: 1px solid #f88379;
+}
+
+#searchButton:hover {
+  filter: drop-shadow(1px 1px 2px hsla(300, 20%, 70%, 0.9));
+  cursor: pointer;
+}
+
+#searchButton:focus {
+  border: 2px solid hsla(300, 20%, 70%, 0.9);
+  outline: 2px solid hsla(300, 20%, 70%, 0.9);
+  background-color: hsla(300, 20%, 70%, 0.9);
+}
+
+#background {
+  background-color: white;
+}
+
+</style>
+</head>
+
+<body>
+
+<div id= "searchBox">
+  <h1 id= "logo"> Google </h1>
+  <input id= "searchInput" type= "search" placeholder= "search anything"> </input>
+  <button id= "searchButton"> submit </button>
+</div>
+
+<script>
+
+/*
+1) document, ask where #logo is
+2) write down that address of #logo
+3) visit that address (#logo)
+4) enter (#logo), find the attribute(style > color), change the value (red)
+*/
+
+var myLogo = document.querySelector("#logo");
+// console.log(myLogo.innerHTML);
+// console.log(myLogo.style.color);
+// myLogo.innerHTML = "Goooooogle";
+// myLogo.style.color = "black"
+
+var myInput = document.querySelector("#searchInput");
+//console.log(myInput.placeholder);
+//console.log(myInput.value);
+
+var myButton = document.querySelector("#searchButton");
+//console.log(myButton.innerHTML);
+
+var myBackground = document.querySelector("#background");
+//console.log(myBackground.style.color);
+
+var newLogo;
+
+myButton.addEventListener("click", changeIt);
+function changeIt() {
+  newLogo = myInput.value;
+  myInput.value = "";
+  myLogo.innerHTML = newLogo;
+  myLogo.style.color = "orange";
+  myBackground.style.backgroundColor = "black";
+  myButton.style.backgroundColor = "orange";
+  myButton.style.color = "black"
+}
+
+</script>
+</body>
+</html>
