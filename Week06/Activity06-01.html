@@ -10,7 +10,9 @@
 <style>
 
 body {
-  margin: 0;
+  margin-top: 2em;
+  margin-left: 2em;
+  margin-right: 2em;
   background: #DFE6E9;
   font-family: montserrat;
   font-size: 1em;
@@ -134,7 +136,7 @@ body {
     padding: 0.5em;
     background-image: url("./icons/light_mode_black_24dp.svg");
     background-size: contain;
-    border: 1px solid gray;
+    border: 1px solid white;
   }
 
   .light-mode {
@@ -145,6 +147,41 @@ body {
   background-color: white;
   }
 
+  #BigFontButton {
+    width: 2em;
+    height: 2em;
+    padding: 0.5em;
+    background-image: url("./icons/plus.svg");
+    background-size: contain;
+    border: 1px solid white;
+  }
+
+  .bigger-font {
+  background-color: white;
+  }
+
+  .bigger-font-link {
+  background-color: white;
+  }
+
+  #SmallFontButton {
+    width: 2em;
+    height: 2em;
+    padding: 0.5em;
+    background-image: url("./icons/minus.svg");
+    background-size: contain;
+    border: 1px solid white;
+  }
+
+  .smaller-font {
+  background-color: white;
+  }
+
+  .smaller-font-link {
+  background-color: gray;
+  }
+
+
 </style>
 </head>
 
@@ -154,8 +191,8 @@ body {
 
   <a class="myButton" href="#main"> <b>SKIP TO CONTENT</b> </a>
 
-  <button type= "button" id="BigFontButton" aria-label="Bigger Font"> Bigger Font </button>
-  <button type= "button" id="SmallFontButton" aria-label="Smaller Font"> Smaller Font </button>
+  <button type= "button" id="BigFontButton" aria-label="Bigger Font"> </button>
+  <button type= "button" id="SmallFontButton" aria-label="Smaller Font"> </button>
   <button type= "button" id="LightModeButton" aria-label="Light Mode"> </button>
   <button type= "button" id="DarkModeButton" aria-label="Dark Mode"> </button>
 
@@ -271,8 +308,6 @@ body {
   <!-- icon library -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-
-
   <!-- icons -->
   <!-- <label for="TwitterIcon"> Visit the De Young Twitter </label> -->
     <a id="TwitterIcon" href="https://twitter.com/deyoungmuseum"
@@ -326,7 +361,7 @@ body {
       and its corresponding article. However, the screen reader reads the images as
       'Link' because the images are linked, which may confuse users.
     </p>
-
+    <hr>
     <p>
       2) From the first test of my work, I had inputted buttons and links as well
       as linked buttons that seemed to work fine. However, when I got to the
@@ -335,12 +370,12 @@ body {
       not include ARIA labels for icon-only buttons. Because of this, my accessibility
       score was (91) and SEO score was (100).
     </p>
-
+    <hr>
     <p>
       3) Once I made edits to my markup and added ARIA labels to the icon-only
       buttons, my accessibility score went up to (98) and SEO score stayed at (100).
     </p>
-
+    <hr>
 
 
     <p> This website is a markup of the original <a href="https://deyoung.famsf.org/"
